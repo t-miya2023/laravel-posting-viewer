@@ -9,6 +9,10 @@
     <h2 class="mb-3">{{$shop->shop_name}}のレビュー一覧</h2>
     <div class="row justify-content-center">
         <div class="col-6">
+            <i class="bi bi-star-fill">{{ $averageRating }}</i>
+            @if($reviews->isEmpty())
+                <h4 class="m-5">まだ投稿はありません</h4>
+            @else
             @foreach($reviews as $review)
             <div class="p-3 border-bottom">
                 <h4>タイトル：{{$review->title}}</h4>
@@ -23,6 +27,7 @@
                 </p>
             </div>
             @endforeach
+            @endif
         </div>
         
     </div>

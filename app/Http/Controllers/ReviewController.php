@@ -145,7 +145,8 @@ class ReviewController extends Controller
     //お店のレビュー一覧
     public function shopReviews(Shop $shop)
     {
-        $reviews = Review::where('shop_id', $shop->id)->get();
-        return view('shops.shop_reviews',compact('reviews','shop'));
+        $reviews = Review::where('shop_id', $shop->id)->where('status',true)->get();
+        $averageRating = number_format($shop->reviews()->where('status', true)->avg('rating'), 1);
+        return view('shops.shop_reviews',compact('reviews','shop','averageRating'));
     }
 }
