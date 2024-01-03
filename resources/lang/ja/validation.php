@@ -153,6 +153,16 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'email' => 'メールアドレス',
+        'name' => '氏名',
+        'title' => 'タイトル',
+        'post_code' => '郵便番号',
+        'prefecture' => '県名',
+        'address' => '住所',
+        'shop_name' => '店舗名',
+        'shop_desc' => '店舗詳細',
+        'tel' => '電話番号',
+    ],
 
 ];

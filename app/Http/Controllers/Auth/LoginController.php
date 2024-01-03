@@ -37,4 +37,8 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+    protected function loggedOut()
+    {
+    return redirect('/'); // ログアウト後にリダイレクトする先を設定
+    }
 }

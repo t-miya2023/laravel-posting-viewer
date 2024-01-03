@@ -1,0 +1,50 @@
+.bi {
+    color: orange;
+    font-size: 32px;
+}
+
+.search-box {
+    position: fixed;
+}
+
+.mainvisual {
+    object-fit: cover;
+    height: 800px;
+    width: 100%;
+    margin-top:-20px;
+}
+
+.top-search-box {
+    position: absolute;
+    top: 50%;
+    /* 上端を親要素の中央に配置 */
+    left: 50%;
+    /* 左端を親要素の中央に配置 */
+    transform: translate(-50%, -50%);
+    /* 中央に移動するためのトランスフォーム */
+    background-color: antiquewhite;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+@media (max-width: 1000px) {
+
+    /* 例: 768pxはスマートフォンサイズの閾値です。必要に応じて調整してください。 */
+    .search-box {
+        position: static !important;
+        /* 要素を固定された位置から解除 */
+    }
+}
+
+.element-with-3d-border {
+    width: 100%;
+    /* 要素の幅を設定 */
+    /*background-color: #fff;*/
+    /* 背景色を設定 */
+    border: none;
+    /* ボーダーをリセット */
+
+    /* 立体的なボーダー（box-shadow） */
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.2);;
+    /* Xオフセット、Yオフセット、ぼかし半径、影の色を設定 */
+}
+
