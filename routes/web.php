@@ -32,7 +32,7 @@ Route::get('/', [HomeController::class,'index'])->name('welcome');
 Route::get('/address/{zip}',[addressController::class,'address']);
 
 Auth::routes();
-
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::view('/admin/login', 'admin/login');
 Route::post('/admin/login', [App\Http\Controllers\admin\LoginController::class, 'login'])->name('admin.login');
