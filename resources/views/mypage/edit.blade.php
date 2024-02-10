@@ -42,7 +42,7 @@
                 @enderror
                 @endif
                 <input type="hidden" name="page" value="{{$page}}">
-                <button type="submit" class="btn btn-primary">更新</button>
+                <button type="submit" class="btn btn-primary" disabled>更新</button>
                 <a href="{{route('mypage.show',$user->id)}}" class="btn btn-warning mx-5">戻る</a>
             </form>
         </div>

@@ -10,7 +10,7 @@
                 <form id="deleteForm" method="POST" action="{{ route('mypage.destroy',$user->id) }}">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" class="btn btn-danger" id="logout-button">退会する</button>
+                    <button type="submit" class="btn btn-danger" id="logout-button" disabled>退会する</button>
                 </form>
             </div>
         </div>
